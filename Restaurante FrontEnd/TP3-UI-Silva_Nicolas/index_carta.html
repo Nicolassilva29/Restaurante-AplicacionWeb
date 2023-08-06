@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style__carta.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,300;1,200&display=swap"
+    rel="stylesheet">
+  <title>Carta</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body class="body__carta">
+  <div class="body_content">
+    <header class="header__carta">
+      <img class="imagen_header"
+        src="./img/variety-of-foods-in-plate-with-black-background-wallpaper-3840x2400_9 (3).jpg" alt="header__carta" />
+      <h1 class="header__text">Nuestro menú</h1>
+    </header>
+    <main>
+      <div class="filtro_superior">
+        <div class="buscar_container">
+          <input type="text" placeholder="Buscar" class="search" id="search">
+        </div>
+        <div id="botones_orden" class="botones_orden">
+  
+          <button class="orden" data-orden="ASC">Menor Precio</button>
+          <button class="orden" data-orden="DESC">Mayor Precio</button>
+  
+        </div>
+      </div>
+      <div id="botones_filtro" class="botones_filtro">
+
+        <button class="filtrar_todas">Todas</button>
+        <button class="filtro_tipo" data-tipo="1">Entradas</button>
+        <button class="filtro_tipo" data-tipo="2">Minutas</button>
+        <button class="filtro_tipo" data-tipo="3">Pastas</button>
+        <button class="filtro_tipo" data-tipo="4">Parrilla</button>
+        <button class="filtro_tipo" data-tipo="5">Pizzas</button>
+        <button class="filtro_tipo" data-tipo="6">Sandwiches</button>
+        <button class="filtro_tipo" data-tipo="7">Ensaladas</button>
+        <button class="filtro_tipo" data-tipo="8">Bebidas</button>
+        <button class="filtro_tipo" data-tipo="9">Cervezas</button>
+        <button class="filtro_tipo" data-tipo="10">Postres</button>
+      </div>
+      
+      <div id="main_content" class="main_content">
+        <section id="carta"></section>
+        <section id="comanda" class="comanda">
+          <img class="animate__animated animate__fadeIn" id="imagen_fondo_pedido" src="./img/Logo_pedido.png"
+            alt="img__pedido" />
+          <img class="animate__animated animate__fadeInDown" id="pedido_realizado" src="./img/tick-amarillo.jpg"
+            alt="pedido_realizado">
+          <div id="detalle_pedido" class="detalle_pedido">
+            <h2>Mi pedido</h2>
+            <div id="lista_comanda" class="lista_comanda"></div>
+            <p id="precio_total" class="precio_total">Total: <span id="total_precio"></span></p>
+            <div class="forma_entrega_div">
+              <button class="forma_entrega" data-forma="1">Salón</button>
+              <button class="forma_entrega" data-forma="2">Delivery</button>
+              <button class="forma_entrega" data-forma="3">Pedidos Ya</button>
+            </div>
+            <button id="crear_comanda" class="crear_comanda">Crear Comanda</button>
+          </div>
+        </section>
+        <section id="detalle" class="detalle"></section>
+      </div>
+    </main>
+  </div>
+  <script src="./main.js" type="module"> </script>
+</body>
+
+</html>

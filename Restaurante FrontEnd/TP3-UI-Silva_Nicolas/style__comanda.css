@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.body__comanda{
+    background-color: #141414;
+    padding: 10px;
+    margin: 10px;
+}
+
+
+.header__comanda{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 25px ;
+    margin: 25px;
+}
+.comanda{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#comanda_vacia{
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #141414;
+    border: 2px white solid;
+    padding: 25px;
+}
+
+#comanda_vacia h2{
+    color: white;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+.comanda_detalle {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    border: #ca8c05 1px solid;
+    width: 390px;
+    transition: transform 0.3s;
+    margin: 15px;
+    padding: 10px;
+  }
+  
+  .datos_comanda {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+  }
+
+
+.comanda_detalle:hover{
+    transform: scale(1.02);
+    border: 1px solid #ca8c05;
+    box-shadow: 0 0 10px #ca8c05;
+}
+
+.mercaderia_comanda{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.comanda_detalle p {
+    margin-bottom: 5px;
+}
+
+.mercaderia_comanda {
+    color: #ca8c05;
+}
+
+.mercaderia_comanda p{
+    font-size: 15px;
+    color: #ca8c05;
+}

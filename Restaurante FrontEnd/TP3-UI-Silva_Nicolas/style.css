@@ -1,0 +1,353 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    background-color: rgb(253, 252, 252);
+}
+header{
+    position: relative;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    width: 100%;
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: 400px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.slider li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+}
+
+#container>ul,
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#container>ul.slider {
+    position: relative;
+    top: 0px;
+    width: 100%;
+    height: 400px;
+}
+
+#container>ul.slider li {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: opacity .5s;
+}
+
+#container>ul.slider li img {
+    width: 100%;
+    height: 100%;
+    top: 100px;
+    object-fit: cover;
+}
+
+#container>ul.slider li:first-child {
+    opacity: 1;
+}
+
+#container>ul.slider li:target {
+    opacity: 1;
+}
+
+#container>.menu {
+    position: relative;
+    display: flex;
+    text-align: center;
+    bottom: 25px;
+    z-index: 1;
+    gap: 5px;
+}
+
+#container>.menu li {
+    display: inline-block;
+    text-align: center;
+    
+}
+
+#container>.menu li a {
+    display: inline-block;
+    color: rgba(0, 0, 0, 0);
+    text-decoration: none;
+    background-color:rgba(17, 17, 17, 0);
+    border:  #ca8c05 1px solid;
+    padding: 0px;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    transition: background-color 0.5s;
+    
+}
+#container>.menu li a:hover {
+    background-color:  #ca8c05;
+}
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.logo img {
+    width: 12rem;
+    height: 12rem;
+}
+
+nav{
+    background-color: black;
+    color: #f8f4f4;
+}
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+nav ul{
+    color: rgb(255, 255, 255);
+    font-size:x-large;
+    display: flex;
+    list-style: none;
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    z-index: 1;
+    justify-content: space-around;
+    transition: 0.3s;
+    
+}
+nav ul li {
+    position: relative;
+}
+
+nav ul li::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease; 
+}
+
+
+nav ul li:hover::after {
+    width: 100%; 
+}
+
+.main{
+    background-color: #292828;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+
+} 
+
+#nosotros{
+    width: 850px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s;
+    border: #292828 0.5px solid;
+    box-shadow: 0 0 5px;
+    margin-bottom: 50px;
+}
+#nosotros:hover{
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+main h2 {
+    color: #ca8c05;
+    font-weight: lighter;
+}
+
+#nosotros-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.nosotros-images{
+    display: flex;
+    gap: 10px;
+}
+
+.images-superior img,
+.images-inferior img {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.images-superior img,
+.images-inferior img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.nosotros-text {
+    position: relative;
+    bottom: 15px;
+    flex: 1;
+    color: white;
+    max-width: 300px;
+    text-align: left;
+}
+
+.nosotros-text h2{
+    text-align: start;
+}
+
+.carta{
+    width: 850px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s;
+    border: #292828 0.5px solid;
+    box-shadow: 0 0 5px;
+    margin: 50px 0;
+}
+.carta:hover{
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.carta-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.carta-images{
+    display: flex;
+    gap: 10px;
+}
+
+.carta-images-superior img,
+.carta-images-inferior img {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    gap: 10px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.carta-text {
+    position: relative;
+    flex: 1;
+    color: white;
+    max-width: 250px;
+    text-align: justify;
+    bottom: 130px;
+}
+.boton {
+    position: absolute;
+    display: inline-block;
+    padding: 22px 40px;
+    margin-top: 50px;
+    background-color:#ca8c05;
+    color: #070707;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #050505;
+}
+.boton:hover{
+    color: white;
+}
+
+#footer {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    box-shadow: 0px -5px 15px -5px white;
+    font-family: "Montserrat", sans-serif;
+}
+  
+#footer img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+  
+  
+.footer__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+  
+.info_contacto,
+.horarios {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: rgb(255, 255, 255);
+    text-align: left; 
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-left: 100px;
+}
+
+.info_contacto h3,
+.horarios h3 {
+    color: lightgray;
+    font-size: x-large;
+    margin-bottom: 15px; 
+}
+.horarios h5,
+.info_contacto h4{
+    color: #d87e17;
+    font-size: large;
+    font-weight: lighter;
+    max-width: 250px;
+}
+
+.info_contacto ul li,
+.horarios ul li {
+    margin-bottom: 10px;
+    text-align: left; 
+}
